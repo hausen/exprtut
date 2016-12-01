@@ -21,10 +21,11 @@ Descrição
 ---------
 
 Usando o algoritmo do pátio de manobras, ou
-[shunting-yard algorithm] [EWD63], podemos transformar
+[shunting-yard algorithm] [WIK16a] (criado por
+[E. W. Dijkstra] [EWD63]), podemos transformar
 uma expressão matemática da notação infixa comum
 (operadores entre os operandos) para a notação
-posfixa ou [notação polonesa reversa] [WIK16].
+posfixa ou [notação polonesa reversa] [WIK16b].
 
 Esta implementação usa a seguinte versão do algoritmo:
 
@@ -133,11 +134,14 @@ Licença
 [EWD63]: https://www.cs.utexas.edu/~EWD/MCReps/MR35.PDF#page=22
          "Making a translator for ALGOL 60"
 
-[WIK16]: https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_polonesa_inversa
-         "Notação polonesa reversa"
+[WIK16a]: https://en.wikipedia.org/wiki/Shunting-yard_algorithm
+          "Shunting-yard algorithm - Wikipedia"
+
+[WIK16b]: https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_polonesa_inversa
+         "Notação polonesa reversa - Wikipédia"
 
 [PEG15]: http://wcipeg.com/wiki/Shunting_yard_algorithm#Unary_operators
-         "Shunting yard algorithm -- Unary operators"
+         "Shunting yard algorithm - Unary operators"
 
 [GNU07]: https://www.gnu.org/licenses/agpl-3.0.txt
          "GNU Affero General Public License 3.0"

@@ -33,10 +33,10 @@ Esta implementação usa a seguinte versão do algoritmo:
         insere token no topo da pilha de saída
       SE token é um operador o1 ENTÃO
         ENQUANTO existe operador o2 no topo da pilha de
-                 operadores FAÇA
-          SE precedência de o1 ≤ precedência de o2 ENTÃO 
-            remove o2 do topo da pilha de operadores
-            insere o2 no topo da pilha de saída
+                 operadores 
+                 E precedência de o1 ≤ precedência de o2 FAÇA
+          remove o2 do topo da pilha de operadores
+          insere o2 no topo da pilha de saída
         insere token o1 no topo da pilha de operadores
       SE token é parêntese esquerdo "(" ENTÃO
         insere token no topo da pilha de operadores
@@ -50,21 +50,22 @@ Esta implementação usa a seguinte versão do algoritmo:
         remove parêntese esquerdo da pilha de operadores
     ENQUANTO pilha de operadores não vazia FAÇA
       remove operador do topo da pilha de operadores
-      SE operador é parêntese esquerdo ENTÃO
+      SE operador é parêntese ENTÃO
         ERRO
       insere operador no topo da pilha de saída
 
 A implementação é intencionalmente muito simples.
 Apenas estão implementadas as 4 operações aritméticas
-básicas. Além disso, o resultado da execução é meramente
+básicas, sendo que o operador '-' é sempre binário.
+Além disso, o resultado da execução é meramente
 uma lista de tokens que representa a expressão na
 notação posfixa.
 
 Por ser simples, é fácil adicionar funcionalidades ao
 programa. Veja a seção "Exercícios."
 
-Compilando
-----------
+Compilando e Executando
+-----------------------
 
 Entre no diretório `src` e execute `make`. Isto
 irá compilar todos os arquivos fontes e gerará um
@@ -78,6 +79,7 @@ Exemplos
 
     ./analisador "2 + 3"
     ./analisador "3 + 2 * 4 - 8 * 0.5"
+    ./analisador "3 + 4 * 2 / ( 1 - 5 ) * 2 + 3"
     ./analisador "(2.5 + 3 * 5) / (3 - 4.8)"
 
 Exercícios
@@ -87,11 +89,25 @@ Exercícios
 a partir da expressão em notação polonesa reversa.
 
 2) Como você faria para implementar o operador
-unário menos (p. ex. na expressão "-3")?
+unário '-' (p. ex. na expressão "-3")? [Dicas:] [PEG15]
+
+* se na expressão infixa o caractere '-' aparece
+  no início, é precedido por outro operador ou é
+  precedido por um parêntese esquerdo, ele é unário
+
+* o tokenizador deve distinguir entre o operador
+  binário '-' e o operador unário '-'
+
+* o operador unário '-' não pode retirar outros
+  operandos da pilha, pois na expressão posfixa
+  ele sempre seguirá imediatamente seu operando
+
+* o operador unário '-' deve ter maior precedência
+  que os operadores de multiplicação e divisão
 
 3) Altere o tokenizador e o parser para implementar
 a operação de potenciação, usando o acento
-circunflexo (^) para representá-la.
+circunflexo '^' para representá-la.
 
 4) Implemente funções básicas: trigonométricas
 (sen, cos, tan, csc e cot), trigonométricas
@@ -119,6 +135,9 @@ Licença
 
 [WIK16]: https://pt.wikipedia.org/wiki/Nota%C3%A7%C3%A3o_polonesa_inversa
          "Notação polonesa reversa"
+
+[PEG15]: http://wcipeg.com/wiki/Shunting_yard_algorithm#Unary_operators
+         "Shunting yard algorithm -- Unary operators"
 
 [GNU07]: https://www.gnu.org/licenses/agpl-3.0.txt
          "GNU Affero General Public License 3.0"

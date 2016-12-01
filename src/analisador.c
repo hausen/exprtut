@@ -3,21 +3,25 @@
 #include <stdlib.h>
 
 int main(int argc, char *argv[]) {
+  struct parser parser;
   if (argc == 1) {
     fprintf(stderr, "Uso: analisador \"expressao\"\n");
     return 1;
   }
-  struct token *tokens = parse(argv[1]);
-  if (tokens != NULL) {
-    int i=0;
-    while (tokens[i].tipo != fim) {
-      token_imprime(tokens+i, stderr);
+  parser_inicializa(&parser);
+  if (parser_parse(&parser, argv[1])) {
+    size_t i;
+    for (i = 0; i < parser.ntokens; ++i) {
+      struct token *tok = &parser.tokens[i];
+      token_imprime(tok, stderr);
       fprintf(stderr, " ");
-      ++i;
     }
     fprintf(stderr, "\n");
-    free(tokens);
+    parser_finaliza(&parser);
     return 0;
+  } else {
+    fprintf(stderr, "ERRO: %s\n", parser.erro);
+    parser_finaliza(&parser);
+    return 1;
   }
-  return 1;
 }

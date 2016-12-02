@@ -109,7 +109,9 @@ a partir da expressão em notação polonesa reversa.
 3) (2,0pt) Altere o tokenizador e o parser para implementar
 a operação de potenciação, usando o acento
 circunflexo `^` para representá-la. Use a função `pow` de
-`math.h` para implementá-la.
+`math.h` para implementá-la. O [pseudocódigo da versão do
+algoritmo shunting-yard descrita na Wikipedia] [WIK16a]
+mostra como o operador `^` deve ser tratado.
 
 4) (2,0pt) Implemente funções básicas e constantes.
 Funções: raiz quadrada (`raiz`), trigonométricas

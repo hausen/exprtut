@@ -90,25 +90,26 @@ Exercícios
 a partir da expressão em notação polonesa reversa.
 
 2) (2,0pt) Como você faria para implementar o operador
-unário '-' (p. ex. na expressão "-3")? [Dicas:] [PEG15]
+unário `-` (p. ex. na expressão `-3`)? [Dicas:] [PEG15]
 
-* se na expressão infixa o caractere '-' aparece
+* se na expressão infixa o caractere `-` aparece
   no início, é precedido por outro operador ou é
   precedido por um parêntese esquerdo, ele é unário
 
 * o tokenizador deve distinguir entre o operador
-  binário '-' e o operador unário '-'
+  binário `-` e o operador unário `-`
 
-* o operador unário '-' não pode retirar outros
-  operandos da pilha, pois na expressão posfixa
+* o operador unário `-` não pode retirar outros
+  operadores da pilha, pois na expressão posfixa
   ele sempre seguirá imediatamente seu operando
 
-* o operador unário '-' deve ter maior precedência
+* o operador unário `-` deve ter maior precedência
   que os operadores de multiplicação e divisão
 
 3) (2,0pt) Altere o tokenizador e o parser para implementar
 a operação de potenciação, usando o acento
-circunflexo '^' para representá-la.
+circunflexo `^` para representá-la. Use a função `pow` de
+`math.h` para implementá-la.
 
 4) (2,0pt) Implemente funções básicas e constantes.
 Funções: raiz quadrada (`raiz`), trigonométricas
@@ -116,7 +117,8 @@ Funções: raiz quadrada (`raiz`), trigonométricas
 trigonométricas inversas (`asen`, `acos`, `atan`,
 `asec`, `acsc` e `acot`), exponencial com base ℯ (`exp`) e
 logarítmica natural (`ln`). Constantes: `%pi` para
-representar π, `%e` para o número de Euler ℯ.
+representar π, `%e` para o número de Euler ℯ. Use as
+constantes e funções da biblioteca `math.h`.
 
 5) (1,0pt) Permita múltiplas expressões, separadas por
 ponto e vírgula (`;`) e em seguida implemente variáveis,

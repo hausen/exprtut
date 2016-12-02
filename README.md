@@ -86,10 +86,10 @@ Exemplos
 Exercícios
 ----------
 
-1) Faça com que o analisador calcule o resultado
+1) (2,0pt) Faça com que o analisador calcule o resultado
 a partir da expressão em notação polonesa reversa.
 
-2) Como você faria para implementar o operador
+2) (2,0pt) Como você faria para implementar o operador
 unário '-' (p. ex. na expressão "-3")? [Dicas:] [PEG15]
 
 * se na expressão infixa o caractere '-' aparece
@@ -106,24 +106,30 @@ unário '-' (p. ex. na expressão "-3")? [Dicas:] [PEG15]
 * o operador unário '-' deve ter maior precedência
   que os operadores de multiplicação e divisão
 
-3) Altere o tokenizador e o parser para implementar
+3) (2,0pt) Altere o tokenizador e o parser para implementar
 a operação de potenciação, usando o acento
 circunflexo '^' para representá-la.
 
-4) Implemente funções básicas: trigonométricas
-(sen, cos, tan, csc e cot), trigonométricas
-inversas (asen, acos, atan, acsc e acot),
-exponencial com base e (exp) e logarítmica
-natural (ln).
+4) (2,0pt) Implemente funções básicas e constantes.
+Funções: raiz quadrada (`raiz`), trigonométricas
+(`sen`, `cos`, `tan`, `sec`, `csc` e `cot`),
+trigonométricas inversas (`asen`, `acos`, `atan`,
+`asec`, `acsc` e `acot`), exponencial com base ℯ (exp) e
+logarítmica natural (ln). Constantes: `%pi` para
+representar π, `%e` para o número de Euler ℯ.
 
-5) Implemente funções com mais de um parâmetro:
-max(a,b) e min(a,b)
+5) (1,0pt) Permita múltiplas expressões, separadas por
+ponto e vírgula (`;`) e em seguida implemente variáveis,
+atribuição e cálculo de expressões envolvendo variáveis.
+Variáveis são identificadores precedidos por `$`.
 
-6) Permita múltiplas expressões, separadas por
-ponto e vírgula (;)
+Exemplo: `$x = %pi / 2; sin(5*$x)` deve resultar `1`
+pois sen(5π / 2) é 1.
 
-7) Implemente variáveis, atribuição e cálculo de
-expressões envolvendo variáveis.
+6) (1,0pt) Implemente funções com mais de um parâmetro:
+`max(num1, num2)` e `min(num1, num2)`
+
+Exemplo: `max(2, 3)` deve resultar `3`
 
 Licença
 -------

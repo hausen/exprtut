@@ -89,8 +89,8 @@ Exercícios
 1) (2,0pt) Faça com que o analisador calcule o resultado
 a partir da expressão em notação polonesa reversa.
 
-2) (2,0pt) Como você faria para implementar o operador
-unário `-` (p. ex. na expressão `-3`)? [Dicas:] [PEG15]
+2) (2,0pt) Implemente o operador unário `-` (como, p. ex., na
+ expressão `-3`). [Dicas:] [PEG15]
 
 * se na expressão infixa o caractere `-` aparece
   no início, é precedido por outro operador ou é

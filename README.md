@@ -114,8 +114,8 @@ circunflexo '^' para representá-la.
 Funções: raiz quadrada (`raiz`), trigonométricas
 (`sen`, `cos`, `tan`, `sec`, `csc` e `cot`),
 trigonométricas inversas (`asen`, `acos`, `atan`,
-`asec`, `acsc` e `acot`), exponencial com base ℯ (exp) e
-logarítmica natural (ln). Constantes: `%pi` para
+`asec`, `acsc` e `acot`), exponencial com base ℯ (`exp`) e
+logarítmica natural (`ln`). Constantes: `%pi` para
 representar π, `%e` para o número de Euler ℯ.
 
 5) (1,0pt) Permita múltiplas expressões, separadas por

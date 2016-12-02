@@ -125,8 +125,8 @@ constantes e funções da biblioteca `math.h`.
 5) (1,0pt) Permita múltiplas expressões, separadas por
 ponto e vírgula (`;`) e em seguida implemente variáveis,
 atribuição e cálculo de expressões envolvendo variáveis.
-Variáveis são identificadores precedidos por `$` e
-seguidos de uma letra de "a" até "z".
+Variáveis são identificadores que começam com `$` e são
+seguidos por apenas uma letra de "a" até "z".
 
 Exemplo: `$x = %pi / 2; sin(5*$x)` deve resultar `1`
 pois sen(5π / 2) é 1.
